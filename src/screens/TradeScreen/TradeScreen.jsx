@@ -57,10 +57,7 @@ const TradeScreen = () => {
 
   useEffect(() => {
     if (!loading) {
-      const intervalId = setInterval(() => {
-        subscribeToUpdates(selectedToken);
-      }, 1000);
-      return () => clearInterval(intervalId);
+      subscribeToUpdates(selectedToken);
     }
   }, [selectedToken, loading]);
 
