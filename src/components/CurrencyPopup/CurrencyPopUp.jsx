@@ -4,7 +4,6 @@ import CrossIcon from '../../assets/images/cross.svg';
 import TickIcon from '../../assets/images/tick.svg';
 
 import './CurrencyPopUp.css';
-import axios from 'axios';
 
 const CurrencyPopUp = ({
   isOpen,
@@ -13,6 +12,22 @@ const CurrencyPopUp = ({
   setSelectedToken,
   tokens,
 }) => {
+  const [keyword, setKeyword] = useState('');
+  const [searchedTokens, setSearchTokens] = useState([]);
+
+  const handleSearch = (e) => {
+    if (e.target.value === '') {
+      setSearchTokens(tokens);
+    }
+    setSearchTokens(
+      tokens.filter(
+        (each) =>
+          each.toLowerCase().includes(e.target.value) ||
+          each.includes(e.target.value)
+      )
+    );
+  };
+
   return (
     <div className={`popup_wrapper ${isOpen && 'open'}`}>
       <div className="popup_container">
@@ -25,10 +40,15 @@ const CurrencyPopUp = ({
           />
         </div>
         <div className="search_input">
-          <input type="text" placeholder="Search Chains" name="currency" />
+          <input
+            type="text"
+            placeholder="Search Chains"
+            name="currency"
+            onChange={handleSearch}
+          />
         </div>
         <div className="listed_currencies">
-          {tokens.map((token) => (
+          {searchedTokens.map((token) => (
             <div
               className={`listed_currency ${
                 selectedToken === token && 'selected'
