@@ -13,7 +13,7 @@ const CurrencyPopUp = ({
   tokens,
 }) => {
   const [keyword, setKeyword] = useState('');
-  const [searchedTokens, setSearchTokens] = useState([]);
+  const [searchedTokens, setSearchTokens] = useState(tokens);
 
   const handleSearch = (e) => {
     if (e.target.value === '') {
