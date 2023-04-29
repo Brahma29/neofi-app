@@ -1,0 +1,9 @@
+.not_found {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgba(98, 126, 234, 1);
+}

@@ -1,0 +1,7 @@
+.trade_screen_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}

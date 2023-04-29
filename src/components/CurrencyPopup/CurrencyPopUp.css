@@ -1,0 +1,89 @@
+.popup_wrapper {
+    position: fixed;
+    background: #0b081995;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.open {
+    display: flex;
+}
+
+
+.popup_container {
+    width: 22rem;
+    background: #181627;
+    border-radius: 18px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 22rem;
+}
+
+.popup_header {
+    text-align: end;
+}
+
+.cross_icon {
+    padding: 0.2rem;
+    background: rgba(110, 86, 248, 0.15);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.search_input>input {
+    width: 100%;
+    border-radius: 30px;
+    padding: 0.6rem 1rem;
+    border: 1px solid rgba(110, 86, 248, 0.25);
+    background: transparent;
+    color: inherit;
+    outline: none;
+}
+
+.listed_currencies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    overflow: auto;
+}
+
+.listed_currency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+}
+
+.selected {
+    background: #1B192D;
+
+}
+
+.currency_icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+}
+
+.currency_icon>img {
+    width: 25px;
+}
+
+
+@media screen and (max-width : 550px) {
+    .popup_container {
+        width: 90vw;
+        height: 90vw;
+    }
+}
