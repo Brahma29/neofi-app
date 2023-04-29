@@ -5,7 +5,7 @@ import axios from 'axios';
 import { w3cwebsocket } from 'websocket';
 
 const TradeScreen = () => {
-  const [selectedToken, setSelectedToken] = useState(null);
+  const [selectedToken, setSelectedToken] = useState();
   const [currentPriceSelectedToken, setCurrentPriceSelectedToken] =
     useState(null);
   const [tokens, setTokens] = useState([]);
@@ -57,7 +57,10 @@ const TradeScreen = () => {
 
   useEffect(() => {
     if (!loading) {
-      subscribeToUpdates(selectedToken || tokens[0]);
+      const intervalId = setInterval(() => {
+        subscribeToUpdates(selectedToken);
+      }, 1000);
+      return () => clearInterval(intervalId);
     }
   }, [selectedToken, loading]);
 
