@@ -43,7 +43,9 @@ const TradeCard = ({
         <div className="content">
           <div className="current_value">
             <span>Current value</span>
-            <span className="price">${currentPriceSelectedToken}</span>
+            <span className="price">
+              {currentPriceSelectedToken || 'Getting...'}
+            </span>
           </div>
           <div className="currency_dropdown">
             <button

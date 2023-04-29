@@ -37,6 +37,7 @@ const CurrencyPopUp = ({
                 setSelectedToken(token);
                 setIsOpen(false);
               }}
+              key={token}
             >
               <div className="currency_icon">
                 <img src={Icon} alt="icon" />

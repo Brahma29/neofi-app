@@ -64,7 +64,7 @@ const TradeScreen = () => {
   return (
     <>
       {loading ? (
-        <div>loading...</div>
+        <div className="loading">loading...</div>
       ) : (
         <div className="container">
           <div className="trade_screen_wrapper">

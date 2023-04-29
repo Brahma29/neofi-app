@@ -123,6 +123,13 @@
     margin-top: 0.4rem;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    display: none;
+}
+
 .buy_button {
     padding: 0.8rem;
     border-radius: 30px;

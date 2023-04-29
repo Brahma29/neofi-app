@@ -5,3 +5,13 @@
     padding-top: 6rem;
     padding-bottom: 6rem;
 }
+
+
+.loading {
+    text-align: center;
+    width: 100vw;
+    padding-top: 10rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: rgba(98, 126, 234, 1);
+}
